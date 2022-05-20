@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="700.0" prefWidth="694.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.HelloController">
+   <VBox prefHeight="70.0" prefWidth="694.0">
+      <children>
+         <MenuBar fx:id="mainMenu">
+            <menus>
+               <Menu fx:id="algorithmMenu" mnemonicParsing="false" text="algorithms">
+                 <items>
+                   <MenuItem mnemonicParsing="false" onAction="#setAlgorithmToTest" text="test" />
+                     <MenuItem mnemonicParsing="false" onAction="#setAlgorithmToBWT" text="bwt" />
+                     <MenuItem mnemonicParsing="false" onAction="#setAlgorithmToSA" text="sa" />
+                     <MenuItem mnemonicParsing="false" onAction="#setAlgorithmToWG" text="wg" />
+                 </items>
+               </Menu>
+               <Menu fx:id="languageMenu" mnemonicParsing="false" text="language">
+                 <items>
+                   <MenuItem mnemonicParsing="false" onAction="#changeLanguageToEnglish" text="english" />
+                     <MenuItem mnemonicParsing="false" onAction="#changeLanguageToSlovak" text="slovak" />
+                 </items>
+               </Menu>
+            </menus>
+         </MenuBar>
+         <Pane prefHeight="60.0" prefWidth="694.0">
+            <children>
+               <Label fx:id="algorithmNameLabel" />
+            </children>
+         </Pane>
+      </children></VBox>
+
+   <HBox fx:id="algorithmDisplay" prefHeight="384.0" prefWidth="620.0" />
+   <Pane fx:id="algorithmController" prefHeight="200.0" prefWidth="200.0" />
+</VBox>
